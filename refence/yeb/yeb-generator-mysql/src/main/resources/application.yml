@@ -1,0 +1,17 @@
+#actable:
+#  table:
+#    auto: update
+#  model:
+#    pack: com.example.entity
+#  database:
+#    type: mysql
+#
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/demo?characterEncoding=utf8&useSSL=false&autoReconnect=true
+#    username: root
+#    password: 123456
+#
+#server:
+#  port: 8080

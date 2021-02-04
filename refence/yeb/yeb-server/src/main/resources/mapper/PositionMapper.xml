@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.yeb.mapper.PositionMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xxxx.yeb.pojo.Position">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="createDate" property="createDate"/>
+        <result column="enabled" property="enabled"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, createDate, enabled
+    </sql>
+
+    <select id="selectIdByName" parameterType="String" resultType="java.lang.Integer">
+        SELECT id
+        FROM t_position
+        where name = #{name}
+    </select>
+    <select id="selectPositionById" resultType="com.xxxx.yeb.pojo.Position">
+        select
+        id,name as positionName
+        from
+        t_position
+        where
+        id = #{id}
+    </select>
+
+
+</mapper>

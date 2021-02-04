@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.yeb.mapper.DepartmentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xxxx.yeb.pojo.Department">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="parentId" property="parentId"/>
+        <result column="depPath" property="depPath"/>
+        <result column="enabled" property="enabled"/>
+        <result column="isParent" property="isParent"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, parentId, depPath, enabled, isParent
+    </sql>
+    <insert id="addOrUpdateDepartment" parameterType="com.xxxx.yeb.pojo.Department">
+        insert into
+        t_department (name )
+        values
+        (#{name})
+
+    </insert>
+
+    <select id="queryAllModules" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"></include>
+        from
+        t_department
+    </select>
+
+
+    <select id="queryDepartMent" resultType="java.lang.String">
+        SELECT
+        name
+        FROM
+        t_department
+        WHERE
+        name=#{name}
+    </select>
+
+    <select id="selectDeparymentById" resultType="com.xxxx.yeb.pojo.Department">
+        SELECT
+        <include refid="Base_Column_List"></include>
+        FROM
+        t_department
+        WHERE
+        id=#{id}
+    </select>
+
+    <!-- 通过name查询id -->
+    <select id="selectIdByName" resultType="java.lang.Integer">
+        SELECT
+        id
+        FROM
+        t_department
+        WHERE
+        name=#{name}
+    </select>
+
+
+</mapper>

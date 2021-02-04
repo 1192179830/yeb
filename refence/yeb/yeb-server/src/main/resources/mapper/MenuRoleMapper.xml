@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.yeb.mapper.MenuRoleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xxxx.yeb.pojo.MenuRole">
+        <id column="id" property="id"/>
+        <result column="mid" property="mid"/>
+        <result column="rid" property="rid"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, mid, rid
+    </sql>
+
+    <!-- 查询角色下是否有权限 -->
+    <select id="selectByRid" parameterType="integer" resultType="com.xxxx.yeb.pojo.MenuRole">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        `t_menu_role`
+        WHERE
+        rid = #{rid}
+    </select>
+
+
+    <!-- 添加权限 -->
+    <insert id="insertRole">
+        INSERT INTO t_menu_role ( mid, rid )
+        VALUES
+        <foreach collection="mids" separator="," item="mid">
+            (#{mid},#{rid})
+        </foreach>
+    </insert>
+
+    <!-- 删除角色权限 -->
+    <delete id="deleteByRid">
+        DELETE
+        FROM
+        t_menu_role
+        WHERE
+        rid = #{rid}
+    </delete>
+</mapper>

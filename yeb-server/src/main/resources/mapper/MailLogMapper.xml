@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ybzn.mapper.MailLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ybzn.pojo.MailLog">
+        <result column="msg_id" property="msgId" />
+        <result column="eid" property="eid" />
+        <result column="status" property="status" />
+        <result column="route_key" property="routeKey" />
+        <result column="exchange" property="exchange" />
+        <result column="count" property="count" />
+        <result column="try_time" property="tryTime" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        msg_id, eid, status, route_key, exchange, count, try_time, create_time, update_time
+    </sql>
+
+</mapper>

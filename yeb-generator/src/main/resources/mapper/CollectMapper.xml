@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ybzn.mapper.CollectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ybzn.pojo.Collect">
+        <id column="collect_id" property="collectId" />
+        <result column="user_id" property="userId" />
+        <result column="questionaire_id" property="questionaireId" />
+        <result column="collect_full_date" property="collectFullDate" />
+        <result column="collect_full_deadline" property="collectFullDeadline" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        collect_id, user_id, questionaire_id, collect_full_date, collect_full_deadline
+    </sql>
+
+</mapper>

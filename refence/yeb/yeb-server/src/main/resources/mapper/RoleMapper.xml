@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.yeb.mapper.RoleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xxxx.yeb.pojo.Role">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="nameZh" property="nameZh"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, nameZh
+    </sql>
+
+
+    <!-- 根据用户获取角色列表 -->
+    <select id="getRoles" resultType="com.xxxx.yeb.pojo.Role">
+        SELECT
+        r.*
+        FROM
+        t_role r
+        LEFT JOIN t_admin_role AS ar ON ar.rid = r.id
+        WHERE
+        ar.adminId = #{adminId}
+    </select>
+
+    <!-- 校验角色英文名唯一 lhr -->
+    <select id="selectByName" resultType="com.xxxx.yeb.pojo.Role">
+        SELECT
+        <include refid="Base_Column_List"></include>
+        FROM
+        t_role
+        WHERE
+        name like "%"#{roleName}
+    </select>
+
+    <!-- 校验角色中文名唯一 lhr -->
+    <select id="selectByNameZh" resultType="com.xxxx.yeb.pojo.Role">
+        SELECT
+        <include refid="Base_Column_List"></include>
+        FROM
+        t_role
+        WHERE
+        nameZh=#{roleNameZh}
+    </select>
+
+    <!-- 删除角色 -->
+    <delete id="deleteRoleByRid">
+        DELETE
+        FROM
+        t_role
+        WHERE
+        id = #{rid}
+    </delete>
+</mapper>

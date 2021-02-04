@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ybzn.mapper.QuestionnaireMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ybzn.pojo.Questionnaire">
+        <id column="questionnaire_id" property="questionnaireId" />
+        <result column="questionnaire_title" property="questionnaireTitle" />
+        <result column="questionnaire_subtitle" property="questionnaireSubtitle" />
+        <result column="questionnaire_description" property="questionnaireDescription" />
+        <result column="questionnaire_style" property="questionnaireStyle" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        questionnaire_id, questionnaire_title, questionnaire_subtitle, questionnaire_description, questionnaire_style
+    </sql>
+
+</mapper>

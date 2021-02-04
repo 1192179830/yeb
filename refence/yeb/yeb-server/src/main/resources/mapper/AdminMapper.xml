@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.yeb.mapper.AdminMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xxxx.yeb.pojo.Admin">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="phone" property="phone"/>
+        <result column="telephone" property="telephone"/>
+        <result column="address" property="address"/>
+        <result column="enabled" property="enabled"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="userFace" property="userFace"/>
+        <result column="remark" property="remark"/>
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, phone, telephone, address, enabled, username, password, userFace, remark
+    </sql>
+
+    <update id="updateAdminEnabledById">
+        UPDATE
+        t_admin
+        SET
+        ENABLEd = #{enabled}
+        WHERE
+        id = #{id}
+    </update>
+
+
+    <!-- 根据用户id修改用户头像 -->
+    <update id="updateUserFaceById" parameterType="com.xxxx.yeb.pojo.Admin">
+        update
+        t_admin
+        set
+        userFace = #{admin.userFace}
+        where
+        id = #{admin.id}
+    </update>
+
+    <!-- 根据用户id修改密码 -->
+    <update id="updatePasswordById">
+        update
+        t_admin
+        set
+        password = #{pass}
+        where
+        id = #{adminId}
+    </update>
+
+    <!-- 修改用户信息 -->
+    <update id="updateAdminInfo">
+        update
+        t_admin
+        set
+        name = #{admin.name},
+        telephone = #{admin.telephone},
+        phone = #{admin.phone},
+        address = #{admin.address}
+        where
+        id = #{admin.id}
+    </update>
+
+</mapper>

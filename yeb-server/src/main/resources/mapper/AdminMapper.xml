@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ybzn.mapper.AdminMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.ybzn.pojo.Admin">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="telephone" property="telephone" />
+        <result column="address" property="address" />
+        <result column="enabled" property="enabled" />
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="user_face" property="userFace" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, phone, telephone, address, enabled, username, password, user_face, remark
+    </sql>
+    <resultMap id="adminWithRole" type="com.ybzn.pojo.Admin" extends="BaseResultMap">
+        <collection property="roles" ofType="com.ybzn.pojo.Role">
+            <id property="id" column="rid"/>
+            <result property="name" column="rname"/>
+            <result property="nameZh" column="rnameZh"/>
+        </collection>
+
+    </resultMap>
+
+<!--    获取所有操作员-->
+    <select id="getAllAdmin" resultMap="adminWithRole">
+            SELECT
+                a.*,
+                r.id AS rid,
+                r.`name` AS rname,
+                r.name_zh AS rnameZh
+            FROM
+                t_admin a,
+                t_admin_role ar,
+                t_role r
+            WHERE
+                a.id = ar.admin_id
+                AND ar.rid = r.id
+                AND a.id != #{id}
+                <if test="null!=keywords and ''!=keywords">
+                AND `a`.`name` LIKE CONCAT( '%', #{keywords},'%')
+                </if>
+            ORDER BY
+                a.id
+    </select>
+
+
+</mapper>

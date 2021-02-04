@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.yeb.mapper.EmployeeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xxxx.yeb.pojo.Employee">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="gender" property="gender"/>
+        <result column="birthday" property="birthday"/>
+        <result column="idCard" property="idCard"/>
+        <result column="wedlock" property="wedlock"/>
+        <result column="nationId" property="nationId"/>
+        <result column="nativePlace" property="nativePlace"/>
+        <result column="politicId" property="politicId"/>
+        <result column="email" property="email"/>
+        <result column="phone" property="phone"/>
+        <result column="address" property="address"/>
+        <result column="departmentId" property="departmentId"/>
+        <result column="jobLevelId" property="jobLevelId"/>
+        <result column="posId" property="posId"/>
+        <result column="engageForm" property="engageForm"/>
+        <result column="tiptopDegree" property="tiptopDegree"/>
+        <result column="specialty" property="specialty"/>
+        <result column="school" property="school"/>
+        <result column="beginDate" property="beginDate"/>
+        <result column="workState" property="workState"/>
+        <result column="workID" property="workID"/>
+        <result column="contractTerm" property="contractTerm"/>
+        <result column="conversionTime" property="conversionTime"/>
+        <result column="notWorkDate" property="notWorkDate"/>
+        <result column="beginContract" property="beginContract"/>
+        <result column="endContract" property="endContract"/>
+        <result column="workAge" property="workAge"/>
+        <result column="salaryId" property="salaryId"/>
+    </resultMap>
+
+    <resultMap id="allAndAll" type="com.xxxx.yeb.pojo.Employee" extends="BaseResultMap">
+
+        <association property="nation" javaType="com.xxxx.yeb.pojo.Nation">
+            <id column="nationId" property="id"/>
+            <result column="nationName" property="name" javaType="String"/>
+        </association>
+
+        <association property="politicsStatus" javaType="com.xxxx.yeb.pojo.PoliticsStatus">
+            <id column="politicId" property="id"/>
+            <result column="politicName" property="name" javaType="String"/>
+        </association>
+
+        <association property="department" javaType="com.xxxx.yeb.pojo.Department">
+            <id column="departmentId" property="id"/>
+            <result column="departmentName" property="name" javaType="String"/>
+        </association>
+
+        <association property="joblevel" javaType="com.xxxx.yeb.pojo.Joblevel">
+            <id column="jobLevelId" property="id"/>
+            <result column="jobLevelName" property="name" javaType="String"/>
+        </association>
+        <association property="position" javaType="com.xxxx.yeb.pojo.Position">
+            <id column="posId" property="id"/>
+            <result column="positionName" property="name" javaType="String"/>
+        </association>
+
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, gender, birthday, idCard, wedlock, nationId, nativePlace, politicId, email, phone, address,
+        departmentId, jobLevelId, posId, engageForm, tiptopDegree, specialty, school, beginDate, workState, workID,
+        contractTerm, conversionTime, notWorkDate, beginContract, endContract, workAge, salaryId
+    </sql>
+
+    <!-- 批量新增 -->
+    <insert id="insertBatch">
+        insert into
+        t_employee
+        VALUES
+        <foreach collection="employeeList" item="employee" separator=",">
+            (
+            #{employee.name},
+            #{employee.gender},
+            #{employee.birthday},
+            #{employee.idCard},
+            #{employee.nationId},
+            #{employee.gender},
+            #{employee.username},
+            #{employee.email},
+            #{employee.gender},
+            #{employee.username},
+            #{employee.email},
+            #{employee.gender},
+            #{employee.username},
+            #{employee.email},
+            #{employee.gender},
+            #{employee.username},
+            #{employee.email},
+            #{employee.gender},
+            #{employee.username},
+            #{employee.email},
+            #{employee.gender},
+            #{employee.username},
+            #{employee.email},
+            #{employee.gender},
+            )
+        </foreach>
+    </insert>
+
+
+    <select id="contCommon" parameterType="int" resultType="java.lang.Integer">
+        SELECT count(1)
+        FROM t_employee
+        where salaryId = #{id}
+    </select>
+
+    <select id="contAll" resultType="java.lang.Integer">
+        SELECT count(1)
+        FROM t_employee
+    </select>
+
+    <select id="selectAll" resultType="com.xxxx.yeb.pojo.Employee">
+        SELECT *
+        FROM t_employee
+    </select>
+
+    <select id="selectMaxWorkId" resultType="string">
+        select
+        max(workID)
+        from
+        t_employee
+    </select>
+
+    <select id="selectPagePlus" parameterType="com.xxxx.yeb.query.QueryEmployee" resultMap="allAndAll">
+        select
+        e.*,
+        n.id as nationId, n.name as nationName,
+        p.id as politicId, p.name as politicName,
+        d.id as departmentId,d.name as departmentName,
+        j.id as jobLevelId,j.name as jobLevelName,
+        po.id as posId,po.name as positionName
+        from
+        t_employee e
+        left join
+        t_nation n ON e.nationId=n.id
+        LEFT JOIN
+        t_politics_status p ON e.politicId=p.id
+        LEFT JOIN
+        t_department d ON e.departmentId=d.id
+        LEFT JOIN
+        t_joblevel j ON e.jobLevelId=j.id
+        LEFT JOIN
+        t_position po ON e.posId=po.id
+        <where>
+            <if test="queryEmployee.name != null and queryEmployee.name != '' ">
+                e.name like concat('%',#{queryEmployee.name},'%')
+            </if>
+            <if test="queryEmployee.politicId != null and queryEmployee.politicId !=''">
+                and e.politicId =#{queryEmployee.politicId}
+            </if>
+            <if test="queryEmployee.departmentId != null and queryEmployee.departmentId != '' ">
+                and e.departmentId =#{queryEmployee.departmentId}
+            </if>
+            <if test="queryEmployee.nationId != null and queryEmployee.nationId != ''">
+                and e.nationId =#{queryEmployee.nationId}
+            </if>
+            <if test="queryEmployee.posId != null  and queryEmployee.posId != '' ">
+                and e.posId =#{queryEmployee.posId}
+            </if>
+            <if test="queryEmployee.jobLevelId != null  and queryEmployee.jobLevelId != '' ">
+                and e.jobLevelId =#{queryEmployee.jobLevelId}
+            </if>
+            <if test="queryEmployee.engageForm != null  and queryEmployee.engageForm != ''">
+                and e.engageForm =#{queryEmployee.engageForm}
+            </if>
+            <if test="queryEmployee.beginDateScope != null  and queryEmployee.beginDateScope != ''">
+                and e.beginDate between #{queryEmployee.beginTime} and #{queryEmployee.endTime}
+            </if>
+
+        </where>
+
+    </select>
+
+    <!--根据名字查员工-->
+    <select id="selectByName" resultType="com.xxxx.yeb.pojo.Employee" parameterType="string">
+        select
+        <include refid="Base_Column_List"></include>
+        from
+        t_employee
+        where
+        name =#{name}
+    </select>
+
+    <!--查询总员工数量-->
+    <select id="selectCountEmp" resultType="java.lang.Integer">
+        select
+        count(1)
+        from
+        t_employee
+    </select>
+
+</mapper>
