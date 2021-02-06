@@ -1,4 +1,4 @@
-package com.xxxx.yeb.pojo;
+package com.ybzn.yeb.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

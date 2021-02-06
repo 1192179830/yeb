@@ -1,6 +1,6 @@
-package com.xxxx.yeb.controller.fastdfs;
+package com.ybzn.yeb.controller.fastdfs;
 
-import com.xxxx.yeb.service.fastdfs.IUploadService;
+import com.ybzn.yeb.service.fastdfs.IUploadService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

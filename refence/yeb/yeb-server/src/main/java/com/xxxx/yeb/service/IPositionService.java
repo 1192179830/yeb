@@ -1,8 +1,8 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.xxxx.yeb.pojo.Position;
-import com.xxxx.yeb.pojo.RespBean;
+import com.ybzn.yeb.pojo.Position;
+import com.ybzn.yeb.pojo.RespBean;
 
 /**
  * <p>

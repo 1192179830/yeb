@@ -1,8 +1,8 @@
-package com.xxxx.yeb.config.security;
+package com.ybzn.yeb.config.security;
 
-import com.xxxx.yeb.pojo.Menu;
-import com.xxxx.yeb.pojo.Role;
-import com.xxxx.yeb.service.IMenuService;
+import com.ybzn.yeb.pojo.Menu;
+import com.ybzn.yeb.pojo.Role;
+import com.ybzn.yeb.service.IMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;

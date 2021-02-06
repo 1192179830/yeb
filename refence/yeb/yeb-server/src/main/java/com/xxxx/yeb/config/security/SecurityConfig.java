@@ -1,7 +1,7 @@
-package com.xxxx.yeb.config.security;
+package com.ybzn.yeb.config.security;
 
-import com.xxxx.yeb.pojo.Admin;
-import com.xxxx.yeb.service.IAdminService;
+import com.ybzn.yeb.pojo.Admin;
+import com.ybzn.yeb.service.IAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

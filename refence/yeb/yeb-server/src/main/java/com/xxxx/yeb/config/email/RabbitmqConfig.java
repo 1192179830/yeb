@@ -1,4 +1,4 @@
-package com.xxxx.yeb.config.email;
+package com.ybzn.yeb.config.email;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

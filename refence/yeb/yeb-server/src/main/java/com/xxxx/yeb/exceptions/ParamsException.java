@@ -1,4 +1,4 @@
-package com.xxxx.yeb.exceptions;
+package com.ybzn.yeb.exceptions;
 
 /**
  * 自定义参数异常

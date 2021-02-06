@@ -6,18 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="yeb-emails" />
+        <module name="yeb" />
+        <module name="yeb-email" />
         <module name="yub-generator" />
         <module name="yeb-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="yeb" target="1.8" />
+      <module name="yeb-email" target="1.8" />
+      <module name="yeb-emails" target="1.8" />
+      <module name="yeb-mail" target="1.8" />
       <module name="yeb-server" target="1.8" />
       <module name="yub-generator" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="yeb" options="-parameters" />
+      <module name="yeb-email" options="-parameters" />
+      <module name="yeb-emails" options="-parameters" />
+      <module name="yeb-mail" options="-parameters" />
       <module name="yeb-server" options="-parameters" />
       <module name="yub-generator" options="-parameters" />
     </option>

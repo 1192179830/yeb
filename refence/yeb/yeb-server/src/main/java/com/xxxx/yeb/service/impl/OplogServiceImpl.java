@@ -1,8 +1,8 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
-import com.xxxx.yeb.pojo.Oplog;
-import com.xxxx.yeb.mapper.OplogMapper;
-import com.xxxx.yeb.service.IOplogService;
+import com.ybzn.yeb.pojo.Oplog;
+import com.ybzn.yeb.mapper.OplogMapper;
+import com.ybzn.yeb.service.IOplogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

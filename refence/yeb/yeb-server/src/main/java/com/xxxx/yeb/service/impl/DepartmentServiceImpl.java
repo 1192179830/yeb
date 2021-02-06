@@ -1,12 +1,12 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xxxx.yeb.mapper.DepartmentMapper;
-import com.xxxx.yeb.pojo.Department;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.service.IDepartmentService;
-import com.xxxx.yeb.utils.AssertUtil;
+import com.ybzn.yeb.mapper.DepartmentMapper;
+import com.ybzn.yeb.pojo.Department;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.service.IDepartmentService;
+import com.ybzn.yeb.utils.AssertUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

@@ -1,6 +1,6 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
-import com.xxxx.yeb.pojo.AdminRole;
+import com.ybzn.yeb.pojo.AdminRole;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

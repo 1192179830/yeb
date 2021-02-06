@@ -1,18 +1,26 @@
 package com.ybzn.controller;
 
 
+import cn.afterturn.easypoi.excel.ExcelExportUtil;
+import cn.afterturn.easypoi.excel.ExcelImportUtil;
+import cn.afterturn.easypoi.excel.entity.ExportParams;
+import cn.afterturn.easypoi.excel.entity.ImportParams;
+import cn.afterturn.easypoi.excel.entity.enmus.ExcelType;
 import com.ybzn.pojo.*;
 import com.ybzn.service.*;
 import com.ybzn.utils.ResultBean;
 import com.ybzn.utils.ResultPageBean;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import net.bytebuddy.asm.Advice;
-import org.apache.commons.collections.ResettableIterator;
-import org.apiguardian.api.API;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.net.URLEncoder;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -119,7 +127,71 @@ public class EmployeeController {
         return ResultBean.error("删除失败！");
     }
 
+    @ApiOperation(value = "导出员工数据")
+    @GetMapping(value = "/export",produces = "application/octet-stream")
+    public void exportEmployee(HttpServletResponse response) throws IOException {
+        List <Employee> employeeList = employeeService.getEmployee(null);
+        ExportParams params =new ExportParams("员工表", "员工表", ExcelType.HSSF);
+        Workbook workbook = ExcelExportUtil.exportExcel(params, Employee.class, employeeList);
+        ServletOutputStream outputStream=null;
+        try {
+            //用流的形式传输
+            response.setHeader("content-type", "application/octet-stream");
+            //防止中文乱码
+            response.setHeader("content-disposition", "attachment;filename="+ URLEncoder.encode("员工表.xls", "UTF-8"));
+            outputStream = response.getOutputStream();
+            workbook.write(outputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            if(null!=outputStream)
+            {
+                outputStream.close();
+            }
+        }
+    }
 
+    @ApiOperation(value = "导入员工数据")
+    @PostMapping("/import")
+    public ResultBean importEmployee(MultipartFile file){
+        ImportParams params =new ImportParams();
+        //去掉标题行
+        params.setTitleRows(1);
+        List <Nation> nationList = nationService.list();
+        List <PoliticsStatus> politicsStatusList = politicsStatusService.list();
+        List <Department> departmentList = departmentService.list();
+        List <Joblevel> joblevelList = joblevelService.list();
+        List <Position> positionList = positionService.list();
+
+        try {
+            List <Employee> employeeList = ExcelImportUtil.importExcel(file.getInputStream(), Employee.class, params);
+            for (Employee employee : employeeList) {
+                //通过比较hashcode的值来进行获取，这个方法很关键！原本要查5次数据库的，现在只需要查一次数据库就好了
+                //设置民族Id
+                int indexOfNation = nationList.indexOf(new Nation(employee.getNation().getName()));
+                Integer nationId = nationList.get(indexOfNation).getId();
+                employee.setNationId(nationId);
+                //下面几个都是一样的思路了
+
+                //设置职位Id
+                int indexOfPos = politicsStatusList.indexOf(new PoliticsStatus(employee.getPoliticsStatus().getName()));
+                Integer posId = politicsStatusList.get(indexOfPos).getId();
+                employee.setPosId(posId);
+                //设置部门Id  //写成一行
+               employee.setDepartmentId(departmentList.get(departmentList.indexOf(new Department( employee.getDepartment().getName()))).getId());
+                //设置民族Id
+                employee.setJobLevelId(joblevelList.get(joblevelList.indexOf(new Joblevel(employee.getJoblevel().getName()))).getId());
+                //设置政治面貌Id
+                employee.setPoliticId(positionList.get(positionList.indexOf(new Position(employee.getPosition().getName()))).getId());
+            }
+            if (employeeService.saveBatch(employeeList)) {
+                return ResultBean.success("导入成功！");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ResultBean.error("导入失败！");
+    }
 
 
 }

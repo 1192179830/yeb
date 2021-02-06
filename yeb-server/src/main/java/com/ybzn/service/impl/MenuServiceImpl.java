@@ -1,6 +1,5 @@
 package com.ybzn.service.impl;
 
-import com.ybzn.pojo.Admin;
 import com.ybzn.pojo.Menu;
 import com.ybzn.mapper.MenuMapper;
 import com.ybzn.service.IMenuService;
@@ -10,10 +9,8 @@ import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -68,6 +65,6 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IM
     @Override
     public List <Menu> getAllMenus () {
 
-        return menuMapper.getAllMenus();
+        return menuMapper.getAllMenus(1);
     }
 }

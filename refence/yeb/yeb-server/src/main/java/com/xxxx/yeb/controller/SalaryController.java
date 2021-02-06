@@ -1,4 +1,4 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
@@ -7,16 +7,16 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.xxxx.yeb.mapper.DepartmentMapper;
-import com.xxxx.yeb.mapper.EmployeeMapper;
-import com.xxxx.yeb.mapper.SalaryMapper;
-import com.xxxx.yeb.pojo.Employee;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.pojo.Salary;
-import com.xxxx.yeb.query.EmpQuery;
-import com.xxxx.yeb.query.EmpSalaryQuery;
+import com.ybzn.yeb.mapper.DepartmentMapper;
+import com.ybzn.yeb.mapper.EmployeeMapper;
+import com.ybzn.yeb.mapper.SalaryMapper;
+import com.ybzn.yeb.pojo.Employee;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.pojo.Salary;
+import com.ybzn.yeb.query.EmpQuery;
+import com.ybzn.yeb.query.EmpSalaryQuery;
 
-import com.xxxx.yeb.utils.AssertUtil;
+import com.ybzn.yeb.utils.AssertUtil;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

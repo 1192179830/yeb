@@ -1,6 +1,6 @@
-package com.xxxx.yeb.mapper;
+package com.ybzn.yeb.mapper;
 
-import com.xxxx.yeb.pojo.Position;
+import com.ybzn.yeb.pojo.Position;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Update;

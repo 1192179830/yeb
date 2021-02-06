@@ -1,8 +1,8 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
-import com.xxxx.yeb.pojo.EmployeeEc;
-import com.xxxx.yeb.mapper.EmployeeEcMapper;
-import com.xxxx.yeb.service.IEmployeeEcService;
+import com.ybzn.yeb.pojo.EmployeeEc;
+import com.ybzn.yeb.mapper.EmployeeEcMapper;
+import com.ybzn.yeb.service.IEmployeeEcService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

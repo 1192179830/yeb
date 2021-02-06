@@ -1,4 +1,4 @@
-package com.xxxx.yeb.exceptions;
+package com.ybzn.yeb.exceptions;
 
 /**
  * @description: 自定义文件上传异常

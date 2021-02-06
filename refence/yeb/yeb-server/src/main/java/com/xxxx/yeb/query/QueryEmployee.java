@@ -1,4 +1,4 @@
-package com.xxxx.yeb.query;
+package com.ybzn.yeb.query;
 
 import lombok.Data;
 import lombok.Getter;

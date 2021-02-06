@@ -1,4 +1,4 @@
-package com.xxxx.yeb.service.email;
+package com.ybzn.yeb.service.email;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;

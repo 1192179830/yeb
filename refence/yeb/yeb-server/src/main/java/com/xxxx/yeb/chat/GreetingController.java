@@ -1,11 +1,11 @@
-package com.xxxx.yeb.chat;
+package com.ybzn.yeb.chat;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.xxxx.yeb.pojo.Admin;
-import com.xxxx.yeb.service.IAdminService;
-import com.xxxx.yeb.utils.AssertUtil;
-import com.xxxx.yeb.vo.ChatMsg;
-import com.xxxx.yeb.vo.WebMessage;
+import com.ybzn.yeb.pojo.Admin;
+import com.ybzn.yeb.service.IAdminService;
+import com.ybzn.yeb.utils.AssertUtil;
+import com.ybzn.yeb.vo.ChatMsg;
+import com.ybzn.yeb.vo.WebMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.GetMapping;

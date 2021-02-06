@@ -9,6 +9,7 @@ import com.ybzn.service.IEmployeeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ybzn.utils.ResultBean;
 import com.ybzn.utils.ResultPageBean;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +33,8 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
     @Autowired
     private EmployeeMapper employeeMapper;
 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
     /**
      * 分页查询 员工信息,这个很关键！！
      * @param currentPage
@@ -58,8 +61,8 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
      */
     @Override
     public ResultBean maxWorkId () {
-        List <Map <String, Object>> maps = employeeMapper.selectMaps(new QueryWrapper <Employee>().select("max(workID)"));
-        int i = Integer.parseInt(maps.get(0).get("max(workID)").toString())+1;
+        List <Map <String, Object>> maps = employeeMapper.selectMaps(new QueryWrapper <Employee>().select("max(work_id)"));
+        int i = Integer.parseInt(maps.get(0).get("max(work_id)").toString())+1;
         String maxWorkId = String.format("%08d", i);//格式化一下
         return ResultBean.success(null,maxWorkId);
     }
@@ -79,9 +82,22 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         DecimalFormat decimalFormat =new DecimalFormat("##.00");
         employee.setContractTerm(Double.parseDouble(decimalFormat.format(days/365.00)));
         //********************
-        if(1==employeeMapper.insert(employee)){
+        if(1==employeeMapper.insert(employee)){//发送邮箱信息
+            //发送信息，记得序列化
+            Employee emp=employeeMapper.getEmployee(employee.getId()).get(0);
+            rabbitTemplate.convertAndSend("mail.welcome",emp);
             return ResultBean.success("添加成功!!");
         }
         return ResultBean.error("添加失败！");
+    }
+
+    /**
+     * 根据Id查询员工
+     * @param id
+     * @return
+     */
+    @Override
+    public List <Employee> getEmployee (Integer id) {
+        return employeeMapper.getEmployee(id);
     }
 }

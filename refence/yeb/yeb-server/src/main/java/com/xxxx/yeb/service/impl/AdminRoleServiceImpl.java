@@ -1,8 +1,8 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
-import com.xxxx.yeb.pojo.AdminRole;
-import com.xxxx.yeb.mapper.AdminRoleMapper;
-import com.xxxx.yeb.service.IAdminRoleService;
+import com.ybzn.yeb.pojo.AdminRole;
+import com.ybzn.yeb.mapper.AdminRoleMapper;
+import com.ybzn.yeb.service.IAdminRoleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

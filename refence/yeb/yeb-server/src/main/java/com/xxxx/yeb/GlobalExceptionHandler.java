@@ -1,7 +1,7 @@
-package com.xxxx.yeb;
+package com.ybzn.yeb;
 
-import com.xxxx.yeb.exceptions.ParamsException;
-import com.xxxx.yeb.pojo.RespBean;
+import com.ybzn.yeb.exceptions.ParamsException;
+import com.ybzn.yeb.pojo.RespBean;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

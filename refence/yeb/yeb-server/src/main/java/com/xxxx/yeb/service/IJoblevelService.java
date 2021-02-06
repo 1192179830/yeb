@@ -1,7 +1,7 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.xxxx.yeb.pojo.Joblevel;
+import com.ybzn.yeb.pojo.Joblevel;
 
 import java.util.List;
 

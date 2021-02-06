@@ -59,7 +59,6 @@ public class Employee implements Serializable {
     private String wedlock;
 
     @ApiModelProperty (value = "民族")
-
     private Integer nationId;
 
     @ApiModelProperty (value = "籍贯")
@@ -116,7 +115,7 @@ public class Employee implements Serializable {
 
     @ApiModelProperty (value = "工号")
     @Excel(name="工号")
-    private String workID;
+    private String workId;
 
     @ApiModelProperty (value = "合同期限")
     @Excel(name="合同期限",suffix = "年")

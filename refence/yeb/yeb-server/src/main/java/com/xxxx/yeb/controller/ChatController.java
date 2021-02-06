@@ -1,7 +1,7 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
-import com.xxxx.yeb.pojo.Admin;
-import com.xxxx.yeb.query.AdminQuery;
+import com.ybzn.yeb.pojo.Admin;
+import com.ybzn.yeb.query.AdminQuery;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

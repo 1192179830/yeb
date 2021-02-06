@@ -1,4 +1,4 @@
-package com.xxxx.yeb.utils;
+package com.ybzn.yeb.utils;
 
 public class AddStringUtil {
     public static String addOne (String testStr) {

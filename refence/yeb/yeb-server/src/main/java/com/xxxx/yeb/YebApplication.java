@@ -1,4 +1,4 @@
-package com.xxxx.yeb;
+package com.ybzn.yeb;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

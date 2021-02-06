@@ -2,7 +2,6 @@ package com.ybzn.mapper;
 
 import com.ybzn.pojo.AdminRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.ybzn.utils.ResultBean;
 
 /**
  * <p>

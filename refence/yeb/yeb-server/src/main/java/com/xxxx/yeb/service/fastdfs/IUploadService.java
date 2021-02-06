@@ -1,4 +1,4 @@
-package com.xxxx.yeb.service.fastdfs;
+package com.ybzn.yeb.service.fastdfs;
 
 import org.springframework.web.multipart.MultipartFile;
 

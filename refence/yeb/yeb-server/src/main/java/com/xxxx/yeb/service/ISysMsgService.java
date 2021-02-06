@@ -1,6 +1,6 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
-import com.xxxx.yeb.pojo.SysMsg;
+import com.ybzn.yeb.pojo.SysMsg;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

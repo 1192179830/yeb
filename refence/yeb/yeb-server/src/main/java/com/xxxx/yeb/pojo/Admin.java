@@ -1,4 +1,4 @@
-package com.xxxx.yeb.pojo;
+package com.ybzn.yeb.pojo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

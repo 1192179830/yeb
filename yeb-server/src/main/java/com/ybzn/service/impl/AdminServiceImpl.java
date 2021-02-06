@@ -69,6 +69,7 @@ public class AdminServiceImpl extends ServiceImpl <AdminMapper, Admin> implement
     @Override
     public ResultBean login (String username, String password, String code, HttpServletRequest request) {
         //登录
+        System.out.println();
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         System.out.println(password);
 

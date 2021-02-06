@@ -1,7 +1,7 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
-import com.xxxx.yeb.pojo.Menu;
-import com.xxxx.yeb.service.IMenuService;
+import com.ybzn.yeb.pojo.Menu;
+import com.ybzn.yeb.service.IMenuService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

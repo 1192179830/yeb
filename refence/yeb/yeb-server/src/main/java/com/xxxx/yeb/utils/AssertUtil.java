@@ -1,7 +1,7 @@
-package com.xxxx.yeb.utils;
+package com.ybzn.yeb.utils;
 
-import com.xxxx.yeb.exceptions.FileUploadException;
-import com.xxxx.yeb.exceptions.ParamsException;
+import com.ybzn.yeb.exceptions.FileUploadException;
+import com.ybzn.yeb.exceptions.ParamsException;
 
 /**
  * @author hxxiapgy

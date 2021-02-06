@@ -1,4 +1,4 @@
-package com.xxxx.yeb.controller.email;
+package com.ybzn.yeb.controller.email;
 
 import java.io.UnsupportedEncodingException;
 

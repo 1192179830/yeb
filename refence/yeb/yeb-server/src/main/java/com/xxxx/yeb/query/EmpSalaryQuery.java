@@ -1,8 +1,8 @@
-package com.xxxx.yeb.query;
+package com.ybzn.yeb.query;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.xxxx.yeb.pojo.Department;
-import com.xxxx.yeb.pojo.Salary;
+import com.ybzn.yeb.pojo.Department;
+import com.ybzn.yeb.pojo.Salary;
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

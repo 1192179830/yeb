@@ -31,6 +31,7 @@ public interface MenuMapper extends BaseMapper<Menu> {
     /**查询所有菜单
      *
      * @return
+     * @param id
      */
-    List<Menu> getAllMenus ();
+    List<Menu> getAllMenus (Integer id);
 }

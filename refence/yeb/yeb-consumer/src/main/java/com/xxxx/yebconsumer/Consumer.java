@@ -1,4 +1,4 @@
-package com.xxxx.yebconsumer;
+package com.ybzn.yebconsumer;
 
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

@@ -1,9 +1,9 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
 
-import com.xxxx.yeb.pojo.Department;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.service.IDepartmentService;
+import com.ybzn.yeb.pojo.Department;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.service.IDepartmentService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

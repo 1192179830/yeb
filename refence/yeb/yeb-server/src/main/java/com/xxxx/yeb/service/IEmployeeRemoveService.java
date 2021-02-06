@@ -1,6 +1,6 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
-import com.xxxx.yeb.pojo.EmployeeRemove;
+import com.ybzn.yeb.pojo.EmployeeRemove;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

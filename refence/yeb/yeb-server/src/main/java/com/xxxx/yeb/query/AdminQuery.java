@@ -1,4 +1,4 @@
-package com.xxxx.yeb.query;
+package com.ybzn.yeb.query;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Data;

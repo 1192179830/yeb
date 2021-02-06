@@ -1,6 +1,6 @@
-package com.xxxx.yeb.chat;
+package com.ybzn.yeb.chat;
 
-import com.xxxx.yeb.config.security.JwtTokenUtil;
+import com.ybzn.yeb.config.security.JwtTokenUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

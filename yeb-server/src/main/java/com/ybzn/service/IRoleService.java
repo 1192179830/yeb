@@ -2,7 +2,6 @@ package com.ybzn.service;
 
 import com.ybzn.pojo.Role;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.ybzn.utils.ResultBean;
 
 /**
  * <p>

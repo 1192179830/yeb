@@ -1,13 +1,13 @@
-package com.xxxx.yeb.service.impl.fastdfs;
+package com.ybzn.yeb.service.impl.fastdfs;
 
 import com.alibaba.fastjson.JSON;
 import com.github.tobato.fastdfs.domain.fdfs.StorePath;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
-import com.xxxx.yeb.config.fastdfs.UploadProperties;
-import com.xxxx.yeb.mapper.AdminMapper;
-import com.xxxx.yeb.pojo.Admin;
-import com.xxxx.yeb.service.fastdfs.IUploadService;
-import com.xxxx.yeb.utils.AssertUtil;
+import com.ybzn.yeb.config.fastdfs.UploadProperties;
+import com.ybzn.yeb.mapper.AdminMapper;
+import com.ybzn.yeb.pojo.Admin;
+import com.ybzn.yeb.service.fastdfs.IUploadService;
+import com.ybzn.yeb.utils.AssertUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;

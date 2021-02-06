@@ -1,4 +1,4 @@
-package com.xxxx.yeb.config.mybatis;
+package com.ybzn.yeb.config.mybatis;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

@@ -1,4 +1,4 @@
-package com.xxxx.yeb.enums;
+package com.ybzn.yeb.enums;
 
 /**
  * @name: 职称等级

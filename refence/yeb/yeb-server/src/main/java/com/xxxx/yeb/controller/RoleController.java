@@ -1,12 +1,12 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
 
-import com.xxxx.yeb.pojo.Menu;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.pojo.Role;
-import com.xxxx.yeb.service.IMenuRoleService;
-import com.xxxx.yeb.service.IMenuService;
-import com.xxxx.yeb.service.IRoleService;
+import com.ybzn.yeb.pojo.Menu;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.pojo.Role;
+import com.ybzn.yeb.service.IMenuRoleService;
+import com.ybzn.yeb.service.IMenuService;
+import com.ybzn.yeb.service.IRoleService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 

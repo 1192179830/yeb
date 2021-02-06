@@ -43,7 +43,7 @@ public class PermissionController {
     @ApiOperation(value = "查询所有菜单")
     @GetMapping
     public List<Menu> getAllMenus(){
-        List<Menu> list =menuService.getAllMenus();
+//        List<Menu> list =menuService.getAllMenus();
         return menuService.getAllMenus();
     }
 

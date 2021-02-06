@@ -1,8 +1,8 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
-import com.xxxx.yeb.pojo.SalaryAdjust;
-import com.xxxx.yeb.mapper.SalaryAdjustMapper;
-import com.xxxx.yeb.service.ISalaryAdjustService;
+import com.ybzn.yeb.pojo.SalaryAdjust;
+import com.ybzn.yeb.mapper.SalaryAdjustMapper;
+import com.ybzn.yeb.service.ISalaryAdjustService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

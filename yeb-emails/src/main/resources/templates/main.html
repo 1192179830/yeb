@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.theymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>入职欢迎邮件</title>
+</head>
+<body>
+     欢迎<span th:text="${name}}"/>加入XX大家庭，您的入职信息如下：
+<table border="1">
+    <tr>
+        <td>姓名</td>
+        <td th:text="${name}"></td>
+    </tr>
+    <tr>
+        <td>职位</td>
+        <td th:text="${posName}"></td>
+    </tr>
+    <tr>
+        <td>职称</td>
+        <td th:text="${joblevelName}"></td>
+    </tr>
+    <tr>
+        <td>部门</td>
+        <td th:text="${departmentName}"></td>
+    </tr>
+    <tr>
+        <td>姓名</td>
+        <td th:text="${name}"></td>
+    </tr>
+</table>
+<p>我们的公司xxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+</body>
+</html>

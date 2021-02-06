@@ -57,6 +57,7 @@
     </sql>
     <select id="getMenusByAdminId" resultMap="Menus">
         SELECT
+        DISTINCT
         m1.*,
         m2.id AS id2,
         m2.url AS url2,
@@ -100,22 +101,33 @@
                 m.id
     </select>
 <!--    查询所有菜单-->
-    <select id="getAllMenus" resultMap="MenuWithRoles">
+    <select id="getAllMenus" resultMap="MenuWithRoles" >
         SELECT
-            m1.id AS id1,
-            m1.`name` AS name1,
-            m2.id AS id2,
-            m2.`name` AS name2,
-            m3.id AS id3,
-            m3.`name` AS name3
+        m1.*,
+        m2.id AS id2,
+        m2.url AS url2,
+        m2.path AS path2,
+        m2.component AS component2,
+        m2.`name` AS name2,
+        m2.icon_cls AS iconCls2,
+        m2.keep_alive AS keepAlive2,
+        m2.require_auth AS requireAuth2,
+        m2.parent_id AS parentId2,
+        m2.enabled AS enabled2
         FROM
-            t_menu m1,
-            t_menu m2,
-            t_menu m3
+        t_menu m1,
+        t_menu m2,
+        t_menu_role mr,
+        t_admin_role ar
         WHERE
-            m1.id = m2.parent_id
-            AND m2.id = m3.parent_id
-            AND m3.enabled = TRUE
+        m1.id = m2.parent_id
+        AND m2.id = mr.mid
+        AND mr.rid = ar.rid
+        AND m2.`enabled` = TRUE
+        <if test="id != null and id !=''">
+            AND ar.admin_id = #{id}
+        </if>
+        ORDER BY m1.id
     </select>
 
 </mapper>

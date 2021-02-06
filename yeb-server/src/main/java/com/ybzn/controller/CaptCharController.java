@@ -1,10 +1,8 @@
 package com.ybzn.controller;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
-import com.sun.media.jfxmediaimpl.HostUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apiguardian.api.API;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

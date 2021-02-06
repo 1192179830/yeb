@@ -1,8 +1,8 @@
-package com.xxxx.yeb.controller.flie;
+package com.ybzn.yeb.controller.flie;
 
-import com.xxxx.yeb.mapper.EmployeeMapper;
-import com.xxxx.yeb.pojo.Employee;
-import com.xxxx.yeb.service.flie.FlieService;
+import com.ybzn.yeb.mapper.EmployeeMapper;
+import com.ybzn.yeb.pojo.Employee;
+import com.ybzn.yeb.service.flie.FlieService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

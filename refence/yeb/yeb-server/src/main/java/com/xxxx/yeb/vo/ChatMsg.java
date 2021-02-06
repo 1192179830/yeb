@@ -1,4 +1,4 @@
-package com.xxxx.yeb.vo;
+package com.ybzn.yeb.vo;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

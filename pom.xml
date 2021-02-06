@@ -17,9 +17,10 @@
     <modules>
         <module>yeb-server</module>
         <module>yub-generator</module>
+        <module>yeb-emails</module>
     </modules>
 
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>yeb-Hugo</name>
     <properties>
         <java.version>1.8</java.version>

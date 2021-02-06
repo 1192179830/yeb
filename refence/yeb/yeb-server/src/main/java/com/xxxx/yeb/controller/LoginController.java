@@ -1,9 +1,9 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
-import com.xxxx.yeb.pojo.Admin;
-import com.xxxx.yeb.pojo.AdminLoginParam;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.service.IAdminService;
+import com.ybzn.yeb.pojo.Admin;
+import com.ybzn.yeb.pojo.AdminLoginParam;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.service.IAdminService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

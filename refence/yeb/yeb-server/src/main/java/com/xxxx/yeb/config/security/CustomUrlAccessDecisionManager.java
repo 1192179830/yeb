@@ -1,4 +1,4 @@
-package com.xxxx.yeb.config.security;
+package com.ybzn.yeb.config.security;
 
 import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.access.AccessDeniedException;

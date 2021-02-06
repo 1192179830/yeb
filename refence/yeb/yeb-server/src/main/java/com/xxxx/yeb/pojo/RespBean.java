@@ -1,4 +1,4 @@
-package com.xxxx.yeb.pojo;
+package com.ybzn.yeb.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

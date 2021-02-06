@@ -1,11 +1,11 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.xxxx.yeb.enums.EnabledChangeEnum;
-import com.xxxx.yeb.pojo.Admin;
-import com.xxxx.yeb.pojo.AdminRole;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.pojo.Role;
+import com.ybzn.yeb.enums.EnabledChangeEnum;
+import com.ybzn.yeb.pojo.Admin;
+import com.ybzn.yeb.pojo.AdminRole;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.pojo.Role;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;

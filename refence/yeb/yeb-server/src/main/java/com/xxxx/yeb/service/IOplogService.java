@@ -1,6 +1,6 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
-import com.xxxx.yeb.pojo.Oplog;
+import com.ybzn.yeb.pojo.Oplog;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

@@ -1,6 +1,6 @@
-package com.xxxx.yeb.mapper;
+package com.ybzn.yeb.mapper;
 
-import com.xxxx.yeb.pojo.SalaryAdjust;
+import com.ybzn.yeb.pojo.SalaryAdjust;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

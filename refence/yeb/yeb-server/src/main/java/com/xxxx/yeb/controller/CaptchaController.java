@@ -1,4 +1,4 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import io.swagger.annotations.ApiOperation;

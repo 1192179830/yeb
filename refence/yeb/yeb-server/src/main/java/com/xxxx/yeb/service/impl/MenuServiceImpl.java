@@ -1,11 +1,11 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xxxx.yeb.mapper.MenuMapper;
-import com.xxxx.yeb.mapper.MenuRoleMapper;
-import com.xxxx.yeb.pojo.Admin;
-import com.xxxx.yeb.pojo.Menu;
-import com.xxxx.yeb.service.IMenuService;
+import com.ybzn.yeb.mapper.MenuMapper;
+import com.ybzn.yeb.mapper.MenuRoleMapper;
+import com.ybzn.yeb.pojo.Admin;
+import com.ybzn.yeb.pojo.Menu;
+import com.ybzn.yeb.service.IMenuService;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 

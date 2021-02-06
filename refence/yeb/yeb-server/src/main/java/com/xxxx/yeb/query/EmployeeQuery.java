@@ -1,4 +1,4 @@
-package com.xxxx.yeb.query;
+package com.ybzn.yeb.query;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

@@ -1,10 +1,10 @@
-package com.xxxx.yeb.mapper;
+package com.ybzn.yeb.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.xxxx.yeb.pojo.Employee;
-import com.xxxx.yeb.query.QueryEmployee;
+import com.ybzn.yeb.pojo.Employee;
+import com.ybzn.yeb.query.QueryEmployee;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;

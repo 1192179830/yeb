@@ -1,4 +1,4 @@
-package com.xxxx.yeb.config.security;
+package com.ybzn.yeb.config.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

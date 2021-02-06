@@ -2,7 +2,6 @@ package com.ybzn.controller;
 
 
 import com.ybzn.pojo.Joblevel;
-import com.ybzn.pojo.Position;
 import com.ybzn.service.IJoblevelService;
 import com.ybzn.utils.ResultBean;
 import io.swagger.annotations.Api;

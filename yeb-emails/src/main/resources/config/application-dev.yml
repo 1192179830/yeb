@@ -1,0 +1,22 @@
+server:
+  port: 8092
+spring:
+  mail:
+    #邮箱服务地址
+    host: smtp.163.com
+    # 协议
+    protocol: smtp
+    #编码格式
+    default-encoding: utf-8
+    #授权码
+    password: RREKLWOETIZEVPYA
+    #发送者邮箱
+    username: hugo1192179830@163.com
+    #端口（不同邮箱端口不同）
+    port: 25
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 47.115.31.52
+    port: 5672
+    virtual-host: "/ems"

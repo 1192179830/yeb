@@ -6,6 +6,7 @@ import com.ybzn.pojo.Employee;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -25,4 +26,11 @@ public interface EmployeeMapper extends BaseMapper<Employee> {
      * @return
      */
     IPage<Employee> getEmployeeByPage (Page<Employee> page, Employee employee, LocalDate[] beginDateScope);
+
+    /**
+     * 查询员工
+     * @param id
+     * @return
+     */
+    List<Employee> getEmployee (Integer id);
 }

@@ -1,8 +1,8 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.xxxx.yeb.pojo.*;
-import com.xxxx.yeb.query.QueryEmployee;
+import com.ybzn.yeb.pojo.*;
+import com.ybzn.yeb.query.QueryEmployee;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;

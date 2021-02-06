@@ -1,13 +1,13 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xxxx.yeb.mapper.AdminRoleMapper;
-import com.xxxx.yeb.mapper.MenuRoleMapper;
-import com.xxxx.yeb.mapper.RoleMapper;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.pojo.Role;
-import com.xxxx.yeb.service.IRoleService;
+import com.ybzn.yeb.mapper.AdminRoleMapper;
+import com.ybzn.yeb.mapper.MenuRoleMapper;
+import com.ybzn.yeb.mapper.RoleMapper;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.pojo.Role;
+import com.ybzn.yeb.service.IRoleService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

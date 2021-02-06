@@ -31,7 +31,6 @@ spring:
   redis:
     #服务器地址
 
-#   host: 47.115.31.52   #服务器用这个
     host: 127.0.0.1
     port: 6379
     timeout: 1000ms
@@ -68,6 +67,13 @@ jwt:
   expiration: 604800
   # JWT 负载中拿到开头
   tokenHead: Bearer
+  #rabbitMQ配置
+  rabbitmq:
+    username: guest
+    password: guest
+    host: 47.115.31.52
+    port: 5672
+    virtual-host: "/ems"
 
 #fdfs:
 #  so-timeout: 2500       # 读取时间

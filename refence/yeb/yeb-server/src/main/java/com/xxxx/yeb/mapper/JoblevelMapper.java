@@ -1,7 +1,7 @@
-package com.xxxx.yeb.mapper;
+package com.ybzn.yeb.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xxxx.yeb.pojo.Joblevel;
+import com.ybzn.yeb.pojo.Joblevel;
 
 /**
  * <p>

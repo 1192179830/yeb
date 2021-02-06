@@ -1,7 +1,6 @@
 package com.ybzn.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.ybzn.mapper.MenuMapper;
 import com.ybzn.pojo.MenuRole;
 import com.ybzn.mapper.MenuRoleMapper;
 import com.ybzn.service.IMenuRoleService;

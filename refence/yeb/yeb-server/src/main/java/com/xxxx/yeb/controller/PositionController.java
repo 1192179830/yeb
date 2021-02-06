@@ -1,9 +1,9 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
 
-import com.xxxx.yeb.pojo.Position;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.service.IPositionService;
+import com.ybzn.yeb.pojo.Position;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.service.IPositionService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

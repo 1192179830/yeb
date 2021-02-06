@@ -1,9 +1,7 @@
 package com.ybzn.mapper;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.ybzn.pojo.Admin;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.ybzn.pojo.Menu;
 
 import java.util.List;
 

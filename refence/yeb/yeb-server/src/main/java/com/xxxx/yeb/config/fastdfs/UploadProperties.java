@@ -1,4 +1,4 @@
-package com.xxxx.yeb.config.fastdfs;
+package com.ybzn.yeb.config.fastdfs;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

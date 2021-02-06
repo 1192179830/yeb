@@ -1,6 +1,6 @@
-package com.xxxx.yeb.service;
+package com.ybzn.yeb.service;
 
-import com.xxxx.yeb.pojo.MailLog;
+import com.ybzn.yeb.pojo.MailLog;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

@@ -1,9 +1,9 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
 
-import com.xxxx.yeb.pojo.Joblevel;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.service.IJoblevelService;
+import com.ybzn.yeb.pojo.Joblevel;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.service.IJoblevelService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.xxxx.yeb.controller;
+package com.ybzn.yeb.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

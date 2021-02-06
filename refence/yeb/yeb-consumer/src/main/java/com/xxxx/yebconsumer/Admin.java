@@ -1,4 +1,4 @@
-package com.xxxx.yebconsumer;
+package com.ybzn.yebconsumer;
 
 
 import java.io.Serializable;

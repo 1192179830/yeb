@@ -1,11 +1,11 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xxxx.yeb.mapper.EmployeeMapper;
-import com.xxxx.yeb.mapper.PositionMapper;
-import com.xxxx.yeb.pojo.Position;
-import com.xxxx.yeb.pojo.RespBean;
-import com.xxxx.yeb.service.IPositionService;
+import com.ybzn.yeb.mapper.EmployeeMapper;
+import com.ybzn.yeb.mapper.PositionMapper;
+import com.ybzn.yeb.pojo.Position;
+import com.ybzn.yeb.pojo.RespBean;
+import com.ybzn.yeb.service.IPositionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

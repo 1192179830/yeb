@@ -6,6 +6,7 @@ import com.ybzn.utils.ResultBean;
 import com.ybzn.utils.ResultPageBean;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * <p>
@@ -39,4 +40,6 @@ public interface IEmployeeService extends IService<Employee> {
      * @return
      */
     ResultBean addEmp (Employee employee);
+
+    List <Employee> getEmployee (Integer id);
 }

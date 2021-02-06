@@ -1,4 +1,4 @@
-package com.xxxx.yeb.enums;
+package com.ybzn.yeb.enums;
 
 /**
  * @description: 启用、禁用枚举

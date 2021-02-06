@@ -1,4 +1,4 @@
-package com.xxxx.yeb.config.captcha;
+package com.ybzn.yeb.config.captcha;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;

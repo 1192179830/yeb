@@ -1,8 +1,8 @@
-package com.xxxx.yeb.service.impl;
+package com.ybzn.yeb.service.impl;
 
-import com.xxxx.yeb.pojo.Appraise;
-import com.xxxx.yeb.mapper.AppraiseMapper;
-import com.xxxx.yeb.service.IAppraiseService;
+import com.ybzn.yeb.pojo.Appraise;
+import com.ybzn.yeb.mapper.AppraiseMapper;
+import com.ybzn.yeb.service.IAppraiseService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

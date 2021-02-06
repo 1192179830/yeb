@@ -1,4 +1,4 @@
-package com.xxxx.yeb.chat;
+package com.ybzn.yeb.chat;
 
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;

@@ -120,5 +120,35 @@
 
             ORDER BY e.id
     </select>
+<!--    查询员工-->
+    <select id="getEmployee" resultMap="EmployeeInfo">
+           SELECT
+            e.*,
+            n.id AS nid,
+            n.`name` AS nname,
+            p.id AS pid,
+            p.`name` AS pname,
+            j.id AS jid,
+            j.NAME AS jname,
+            pos.id AS posid,
+            pos.`name` AS posname
+        FROM
+            t_employee e,
+            t_nation n,
+            t_position pos,
+            t_department d,
+            t_politics_status p,
+            t_joblevel j
+        WHERE
+            e.nation_id = n.id
+            AND e.pos_id = pos.id
+            AND e.department_id = d.id
+            AND e.politic_id = p.id
+            AND e.job_level_id = j.id
+            <if test="null!=id">
+            AND e.id=#{id}
+            </if>
+         ORDER BY e.id
+    </select>
 
 </mapper>

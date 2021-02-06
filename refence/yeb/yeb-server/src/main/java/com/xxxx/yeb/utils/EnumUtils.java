@@ -1,6 +1,6 @@
-package com.xxxx.yeb.utils;
+package com.ybzn.yeb.utils;
 
-import com.xxxx.yeb.enums.BaseEnum;
+import com.ybzn.yeb.enums.BaseEnum;
 import org.apache.commons.lang3.StringUtils;
 
 /**

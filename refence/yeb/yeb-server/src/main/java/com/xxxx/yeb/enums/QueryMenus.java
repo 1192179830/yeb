@@ -1,8 +1,8 @@
-package com.xxxx.yeb.enums;
+package com.ybzn.yeb.enums;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.xxxx.yeb.pojo.Menu;
+import com.ybzn.yeb.pojo.Menu;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

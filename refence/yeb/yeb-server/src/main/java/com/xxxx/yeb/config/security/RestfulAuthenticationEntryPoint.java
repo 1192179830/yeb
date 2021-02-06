@@ -1,7 +1,7 @@
-package com.xxxx.yeb.config.security;
+package com.ybzn.yeb.config.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.xxxx.yeb.pojo.RespBean;
+import com.ybzn.yeb.pojo.RespBean;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;

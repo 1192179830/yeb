@@ -1,4 +1,4 @@
-package com.xxxx.yeb.utils;
+package com.ybzn.yeb.utils;
 
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.io.IOUtils;
