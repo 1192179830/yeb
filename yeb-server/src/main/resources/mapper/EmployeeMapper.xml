@@ -40,4 +40,85 @@
         id, name, gender, birthday, id_card, wedlock, nation_id, native_place, politic_id, email, phone, address, department_id, job_level_id, pos_id, engage_form, tiptop_degree, specialty, school, begin_date, work_state, work_i_d, contract_term, conversion_time, not_work_date, begin_contract, end_contract, work_age, salary_id
     </sql>
 
+    <resultMap id="EmployeeInfo" type="com.ybzn.pojo.Employee" extends="BaseResultMap">
+<!--        映射对象Nation-->
+        <association property="nationId" javaType="com.ybzn.pojo.Nation">
+            <id column="nid" property="id"/>
+            <result column="nname" property="name"/>
+        </association>
+        <!--        映射对象PoliticsStatus-->
+        <association property="politicsStatus" javaType="com.ybzn.pojo.PoliticsStatus">
+            <id column="pid" property="id"/>
+            <result column="pname" property="name"/>
+        </association>
+        <!--        映射对象Department-->
+        <association property="department" javaType="com.ybzn.pojo.Department">
+            <id column="did" property="id"/>
+            <result column="dname" property="name"/>
+        </association>
+        <!--        映射对象Joblevel-->
+        <association property="joblevel" javaType="com.ybzn.pojo.Joblevel">
+            <id column="jid" property="id"/>
+            <result column="jname" property="name"/>
+        </association>
+        <!--        映射对象Position-->
+        <association property="position" javaType="com.ybzn.pojo.Position">
+            <id column="posid" property="id"/>
+            <result column="posname" property="name"/>
+        </association>
+    </resultMap>
+
+<!--    分页查询，获取所有员工-->
+    <select id="getEmployeeByPage" resultMap="EmployeeInfo">
+                SELECT
+            e.*,
+            n.id AS nid,
+            n.`name` AS nname,
+            p.id AS pid,
+            p.`name` AS pname,
+            j.id AS jid,
+            j.NAME AS jname,
+            pos.id AS posid,
+            pos.`name` AS posname
+        FROM
+            t_employee e,
+            t_nation n,
+            t_position pos,
+            t_department d,
+            t_politics_status p,
+            t_joblevel j
+        WHERE
+            e.nation_id = n.id
+            AND e.pos_id = pos.id
+            AND e.department_id = d.id
+            AND e.politic_id = p.id
+            AND e.job_level_id = j.id
+            <if test="null!=employee.name and ''!=employee.name">
+            AND e.`name` LIKE CONCAT('%',#{employee.name},'%')
+            </if>
+            <if test="null!=employee.politicId and ''!=employee.politicId">
+            AND e.politic_id = #{employee.politicId}
+            </if>
+            <if test="null!=employee.nationId and ''!=employee.nationId">
+            AND e.nation_id = #{employee.nationId}
+            </if>
+            <if test="null!=employee.jobLevelId and ''!=employee.jobLevelId">
+            AND e.job_level_id =#{employee.jobLevelId}
+            </if>
+            <if test="null!=employee.posId and ''!=employee.posId">
+            AND e.pos_id = #{employee.posId}
+            </if>
+            <if test="null!=employee.engageForm and ''!=employee.engageForm">
+            AND e.engage_form =#{employee.engageForm}
+            </if>
+            <if test="null!=employee.departmentId and ''!=employee.departmentId">
+            AND e.department_id =#{employee.departmentId}
+            </if>
+            <if test="null!=beginDateScope and 2==beginDateScope.length">
+                AND e.begin_date  BETWEEN #{beginDateScope[0]} and #{beginDateScope[1]}
+            </if>
+
+            ORDER BY e.id
+    </select>
+
 </mapper>

@@ -1,7 +1,11 @@
 package com.ybzn.mapper;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.ybzn.pojo.Employee;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.time.LocalDate;
 
 /**
  * <p>
@@ -13,4 +17,12 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface EmployeeMapper extends BaseMapper<Employee> {
 
+    /**
+     * 分页查询所有员工
+     * @param page
+     * @param employee
+     * @param beginDateScope
+     * @return
+     */
+    IPage<Employee> getEmployeeByPage (Page<Employee> page, Employee employee, LocalDate[] beginDateScope);
 }
